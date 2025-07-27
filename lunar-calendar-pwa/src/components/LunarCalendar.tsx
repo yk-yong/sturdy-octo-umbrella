@@ -111,6 +111,7 @@ function LunarCalendar() {
         {/* Month Header */}
         <div className="flex items-center justify-between mb-6">
           <button
+            type="button"
             onClick={handlePrevMonth}
             className="p-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-red-900 font-bold"
             aria-label="Previous month"
@@ -123,6 +124,7 @@ function LunarCalendar() {
           </h2>
 
           <button
+            type="button"
             onClick={handleNextMonth}
             className="p-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-red-900 font-bold"
             aria-label="Next month"
@@ -192,6 +194,7 @@ function LunarCalendar() {
 
                 {dayFestivals.map((festival, festivalIndex) => (
                   <button
+                    type="button"
                     key={festivalIndex}
                     onClick={(e) => {
                       e.stopPropagation();
@@ -252,6 +255,7 @@ function LunarCalendar() {
 
             return (
               <button
+                type="button"
                 key={month}
                 onClick={() => handleMonthSelect(month)}
                 className={`
@@ -311,6 +315,7 @@ function LunarCalendar() {
 
             <div className="flex gap-2">
               <button
+                type="button"
                 onClick={() => handleAddEvent()}
                 className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
               >
@@ -318,6 +323,7 @@ function LunarCalendar() {
               </button>
 
               <button
+                type="button"
                 onClick={handleLanguageToggle}
                 className="px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-red-900 font-semibold rounded-lg transition-colors"
               >
@@ -325,6 +331,7 @@ function LunarCalendar() {
               </button>
 
               <button
+                type="button"
                 onClick={handleViewToggle}
                 className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors"
               >
