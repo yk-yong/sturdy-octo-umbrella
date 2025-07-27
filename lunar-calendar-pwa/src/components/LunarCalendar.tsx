@@ -16,7 +16,7 @@ function LunarCalendar() {
     day: 1,
   });
   const [selectedMonth, setSelectedMonth] = useState<number>(1);
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>("zh");
   const [view, setView] = useState<CalendarView>("month");
   const [festivals] = useState<Festival[]>(
     festivalData.festivals as Festival[]
@@ -37,7 +37,6 @@ function LunarCalendar() {
       setIsLoading(true);
       try {
         const today = await LunarCalendarUtils.getCurrentLunarDate();
-        console.log("Initializing calendar with today's date:", today);
 
         setCurrentDate(today);
         setSelectedMonth(today.month);

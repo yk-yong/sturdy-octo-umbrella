@@ -89,7 +89,6 @@ export class LunarJavaScriptAdapter implements ILunarCalendarService {
         now.getDate()
       );
       const lunar = solar.getLunar();
-      console.log("Current lunar date:", lunar);
 
       return {
         month: lunar.getMonth(),

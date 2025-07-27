@@ -99,8 +99,9 @@ export class LunarCalendarUtils {
     };
 
     const names = monthNames[language];
-    if (month >= 1 && month <= 12) {
-      return names[month - 1];
+    const absMonth = Math.abs(month);
+    if (absMonth >= 1 && absMonth <= 12) {
+      return names[absMonth - 1];
     }
     return "";
   }
