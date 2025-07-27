@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Language, LunarDate } from "../types/calendar";
 import { LunarCalendarUtils } from "../utils/lunarCalendar";
 
@@ -32,6 +32,30 @@ function EventForm({
   const [eventType, setEventType] = useState<"personal" | "reminder">(
     "personal"
   );
+  const [maxDaysInMonth, setMaxDaysInMonth] = useState(30);
+
+  useEffect(() => {
+    const loadMaxDays = async () => {
+      try {
+        const maxDays = await LunarCalendarUtils.getDaysInLunarMonth(
+          selectedMonth
+        );
+        setMaxDaysInMonth(maxDays);
+
+        // Adjust selected day if it exceeds the max days in the new month
+        if (selectedDay > maxDays) {
+          setSelectedDay(maxDays);
+        }
+      } catch (error) {
+        console.error("Error loading max days for month:", error);
+        // Fallback to a reasonable default
+        const fallbackDays = selectedMonth % 2 === 1 ? 30 : 29;
+        setMaxDaysInMonth(fallbackDays);
+      }
+    };
+
+    loadMaxDays();
+  }, [selectedMonth, selectedDay]);
 
   if (!isOpen) {
     return null;
@@ -69,8 +93,6 @@ function EventForm({
     handleReset();
     onClose();
   };
-
-  const maxDaysInMonth = LunarCalendarUtils.getDaysInLunarMonth(selectedMonth);
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
@@ -126,12 +148,23 @@ function EventForm({
               <select
                 id="month"
                 value={selectedMonth}
-                onChange={(e) => {
+                onChange={async (e) => {
                   const month = parseInt(e.target.value);
                   setSelectedMonth(month);
-                  const maxDays = LunarCalendarUtils.getDaysInLunarMonth(month);
-                  if (selectedDay > maxDays) {
-                    setSelectedDay(maxDays);
+
+                  try {
+                    const maxDays =
+                      await LunarCalendarUtils.getDaysInLunarMonth(month);
+                    if (selectedDay > maxDays) {
+                      setSelectedDay(maxDays);
+                    }
+                  } catch (error) {
+                    console.error("Error getting max days for month:", error);
+                    // Fallback adjustment
+                    const fallbackDays = month % 2 === 1 ? 30 : 29;
+                    if (selectedDay > fallbackDays) {
+                      setSelectedDay(fallbackDays);
+                    }
                   }
                 }}
                 className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 focus:border-transparent"

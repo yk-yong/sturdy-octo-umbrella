@@ -29,12 +29,46 @@ function LunarCalendar() {
   const [showEventForm, setShowEventForm] = useState<boolean>(false);
   const [selectedDateForEvent, setSelectedDateForEvent] =
     useState<LunarDate | null>(null);
+  const [monthDays, setMonthDays] = useState<LunarDate[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const today = LunarCalendarUtils.getCurrentLunarDate();
-    setCurrentDate(today);
-    setSelectedMonth(today.month);
+    const initializeCalendar = async () => {
+      setIsLoading(true);
+      try {
+        const today = await LunarCalendarUtils.getCurrentLunarDate();
+        console.log("Initializing calendar with today's date:", today);
+
+        setCurrentDate(today);
+        setSelectedMonth(today.month);
+      } catch (error) {
+        console.error("Error initializing calendar:", error);
+        // Fallback to a default date
+        setCurrentDate({ month: 1, day: 1 });
+        setSelectedMonth(1);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    initializeCalendar();
   }, []);
+
+  useEffect(() => {
+    const loadMonthDays = async () => {
+      if (view === "month") {
+        try {
+          const days = await LunarCalendarUtils.getMonthDays(selectedMonth);
+          setMonthDays(days);
+        } catch (error) {
+          console.error("Error loading month days:", error);
+          setMonthDays([]);
+        }
+      }
+    };
+
+    loadMonthDays();
+  }, [selectedMonth, view]);
 
   const getFestivalsForDate = (date: LunarDate): Festival[] => {
     return festivals.filter((festival) =>
@@ -49,11 +83,13 @@ function LunarCalendar() {
   };
 
   const handleLanguageToggle = () => {
-    setLanguage(language === "en" ? "zh" : "en");
+    const newLanguage = language === "en" ? "zh" : "en";
+    setLanguage(newLanguage);
   };
 
   const handleViewToggle = () => {
-    setView(view === "month" ? "year" : "month");
+    const newView = view === "month" ? "year" : "month";
+    setView(newView);
   };
 
   const handleMonthSelect = (month: number) => {
@@ -74,7 +110,11 @@ function LunarCalendar() {
   };
 
   const handleAddEvent = (date?: LunarDate) => {
-    setSelectedDateForEvent(date || currentDate);
+    if (date) {
+      setSelectedDateForEvent(date);
+    } else {
+      setSelectedDateForEvent(currentDate);
+    }
     setShowEventForm(true);
   };
 
@@ -104,7 +144,16 @@ function LunarCalendar() {
   };
 
   const renderMonthView = () => {
-    const monthDays = LunarCalendarUtils.getMonthDays(selectedMonth);
+    if (isLoading) {
+      return (
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <div className="text-center text-gray-500">
+            {language === "zh" && "加载中..."}
+            {language === "en" && "Loading..."}
+          </div>
+        </div>
+      );
+    }
 
     return (
       <div className="bg-white rounded-lg shadow-lg p-6">

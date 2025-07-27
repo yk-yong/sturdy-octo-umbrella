@@ -1,16 +1,59 @@
 import type { LunarDate } from "../types/calendar";
+import {
+  getLunarCalendarService,
+  type ILunarCalendarService,
+} from "../services/lunarCalendarAdapter";
 
-// Simple lunar calendar utilities
-// Note: This is a simplified implementation for demonstration
-// In a real application, you would use a proper lunar calendar library
-
+// Enhanced lunar calendar utilities using lunar-javascript library
 export class LunarCalendarUtils {
-  static getCurrentLunarDate(): LunarDate {
-    // Simplified calculation - in reality this would be more complex
-    const now = new Date();
+  private static servicePromise: Promise<ILunarCalendarService> | null = null;
+  private static cachedService: ILunarCalendarService | null = null;
+
+  private static async getService(): Promise<ILunarCalendarService> {
+    if (!this.servicePromise) {
+      this.servicePromise = getLunarCalendarService();
+    }
+
+    if (!this.cachedService) {
+      this.cachedService = await this.servicePromise;
+    }
+
+    return this.cachedService;
+  }
+
+  // Async methods for accurate calculations
+  static async getCurrentLunarDate(): Promise<LunarDate> {
+    const service = await this.getService();
+    return service.getCurrentLunarDate();
+  }
+
+  static async solarToLunar(solarDate: Date): Promise<LunarDate> {
+    const service = await this.getService();
+    return service.solarToLunar(solarDate);
+  }
+
+  static async lunarToSolar(
+    lunarDate: LunarDate,
+    year?: number
+  ): Promise<Date> {
+    const service = await this.getService();
+    return service.lunarToSolar(lunarDate, year);
+  }
+
+  // Synchronous methods for immediate use (may use fallback calculations)
+  static getCurrentLunarDateSync(): LunarDate {
+    if (this.cachedService) {
+      return this.cachedService.getCurrentLunarDate();
+    }
+
+    // Fallback calculation
+    return this.getSimpleLunarDate();
+  }
+
+  private static getSimpleLunarDate(date: Date = new Date()): LunarDate {
     const baseDate = new Date(2024, 0, 1); // Approximate start of lunar year
     const diffDays = Math.floor(
-      (now.getTime() - baseDate.getTime()) / (1000 * 60 * 60 * 24)
+      (date.getTime() - baseDate.getTime()) / (1000 * 60 * 60 * 24)
     );
 
     // Approximate lunar month calculation (29.5 days per month)
@@ -55,12 +98,19 @@ export class LunarCalendarUtils {
       ],
     };
 
-    return monthNames[language][month - 1] || "";
+    const names = monthNames[language];
+    if (month >= 1 && month <= 12) {
+      return names[month - 1];
+    }
+    return "";
   }
 
-  static getDaysInLunarMonth(month: number): number {
-    // Simplified - lunar months alternate between 29 and 30 days
-    return month % 2 === 1 ? 30 : 29;
+  static async getDaysInLunarMonth(
+    month: number,
+    year?: number
+  ): Promise<number> {
+    const service = await this.getService();
+    return service.getDaysInLunarMonth(month, year);
   }
 
   static formatLunarDate(date: LunarDate, language: "en" | "zh"): string {
@@ -69,9 +119,9 @@ export class LunarCalendarUtils {
         date.month,
         "zh"
       )}${this.formatChineseDay(date.day)}`;
-    } else {
-      return `${this.getLunarMonthName(date.month, "en")} ${date.day}`;
     }
+
+    return `${this.getLunarMonthName(date.month, "en")} ${date.day}`;
   }
 
   private static formatChineseDay(day: number): string {
@@ -107,15 +157,22 @@ export class LunarCalendarUtils {
       "廿九",
       "三十",
     ];
-    return dayNames[day - 1] || day.toString();
+
+    if (day >= 1 && day <= dayNames.length) {
+      return dayNames[day - 1];
+    }
+    return day.toString();
   }
 
   static isSameDate(date1: LunarDate, date2: LunarDate): boolean {
     return date1.month === date2.month && date1.day === date2.day;
   }
 
-  static getMonthDays(month: number): LunarDate[] {
-    const daysInMonth = this.getDaysInLunarMonth(month);
+  static async getMonthDays(
+    month: number,
+    year?: number
+  ): Promise<LunarDate[]> {
+    const daysInMonth = await this.getDaysInLunarMonth(month, year);
     const days: LunarDate[] = [];
 
     for (let day = 1; day <= daysInMonth; day++) {
@@ -123,5 +180,15 @@ export class LunarCalendarUtils {
     }
 
     return days;
+  }
+
+  static async isLeapMonth(month: number, year?: number): Promise<boolean> {
+    const service = await this.getService();
+    return service.isLeapMonth(month, year);
+  }
+
+  // Initialize the service early
+  static async initialize(): Promise<void> {
+    await this.getService();
   }
 }
