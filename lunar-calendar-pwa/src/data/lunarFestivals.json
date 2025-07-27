@@ -1,0 +1,304 @@
+{
+  "festivals": [
+    {
+      "id": "spring-festival",
+      "name": {
+        "en": "Spring Festival (Chinese New Year)",
+        "zh": "春节"
+      },
+      "date": {
+        "lunar": {
+          "month": 1,
+          "day": 1
+        }
+      },
+      "type": "major",
+      "description": {
+        "en": "The most important traditional Chinese festival celebrating the beginning of the lunar new year",
+        "zh": "中国最重要的传统节日，庆祝农历新年的开始"
+      },
+      "preparations": [
+        {
+          "en": "Red envelopes (hongbao)",
+          "zh": "红包"
+        },
+        {
+          "en": "New Year decorations",
+          "zh": "新年装饰品"
+        },
+        {
+          "en": "Reunion dinner ingredients",
+          "zh": "团圆饭食材"
+        },
+        {
+          "en": "Incense and offerings",
+          "zh": "香烛供品"
+        }
+      ]
+    },
+    {
+      "id": "lantern-festival",
+      "name": {
+        "en": "Lantern Festival",
+        "zh": "元宵节"
+      },
+      "date": {
+        "lunar": {
+          "month": 1,
+          "day": 15
+        }
+      },
+      "type": "major",
+      "description": {
+        "en": "Traditional festival marking the end of Chinese New Year celebrations",
+        "zh": "传统节日，标志着春节庆祝活动的结束"
+      },
+      "preparations": [
+        {
+          "en": "Tangyuan (sweet rice balls)",
+          "zh": "汤圆"
+        },
+        {
+          "en": "Lanterns",
+          "zh": "灯笼"
+        },
+        {
+          "en": "Candles",
+          "zh": "蜡烛"
+        }
+      ]
+    },
+    {
+      "id": "qingming",
+      "name": {
+        "en": "Qingming Festival (Tomb Sweeping Day)",
+        "zh": "清明节"
+      },
+      "date": {
+        "lunar": {
+          "month": 3,
+          "day": 4
+        }
+      },
+      "type": "major",
+      "description": {
+        "en": "Traditional festival for honoring ancestors and visiting graves",
+        "zh": "祭祖扫墓的传统节日"
+      },
+      "preparations": [
+        {
+          "en": "Flowers for offerings",
+          "zh": "献花"
+        },
+        {
+          "en": "Incense sticks",
+          "zh": "香"
+        },
+        {
+          "en": "Food offerings",
+          "zh": "供品"
+        },
+        {
+          "en": "Paper money",
+          "zh": "纸钱"
+        }
+      ]
+    },
+    {
+      "id": "dragon-boat",
+      "name": {
+        "en": "Dragon Boat Festival",
+        "zh": "端午节"
+      },
+      "date": {
+        "lunar": {
+          "month": 5,
+          "day": 5
+        }
+      },
+      "type": "major",
+      "description": {
+        "en": "Festival commemorating the poet Qu Yuan with dragon boat races and zongzi",
+        "zh": "纪念诗人屈原的节日，有赛龙舟和粽子"
+      },
+      "preparations": [
+        {
+          "en": "Zongzi ingredients (sticky rice, bamboo leaves)",
+          "zh": "粽子材料（糯米、竹叶）"
+        },
+        {
+          "en": "Realgar wine",
+          "zh": "雄黄酒"
+        },
+        {
+          "en": "Five-color silk threads",
+          "zh": "五彩丝线"
+        }
+      ]
+    },
+    {
+      "id": "qixi",
+      "name": {
+        "en": "Qixi Festival (Chinese Valentine's Day)",
+        "zh": "七夕节"
+      },
+      "date": {
+        "lunar": {
+          "month": 7,
+          "day": 7
+        }
+      },
+      "type": "traditional",
+      "description": {
+        "en": "Festival celebrating the romantic legend of the cowherd and weaver girl",
+        "zh": "庆祝牛郎织女浪漫传说的节日"
+      },
+      "preparations": [
+        {
+          "en": "Flowers",
+          "zh": "鲜花"
+        },
+        {
+          "en": "Offerings to Zhinü",
+          "zh": "织女供品"
+        }
+      ]
+    },
+    {
+      "id": "ghost-festival",
+      "name": {
+        "en": "Ghost Festival (Zhongyuan Festival)",
+        "zh": "中元节"
+      },
+      "date": {
+        "lunar": {
+          "month": 7,
+          "day": 15
+        }
+      },
+      "type": "traditional",
+      "description": {
+        "en": "Festival for honoring deceased ancestors and appeasing wandering spirits",
+        "zh": "祭祀祖先和安抚游魂的节日"
+      },
+      "preparations": [
+        {
+          "en": "Incense and candles",
+          "zh": "香烛"
+        },
+        {
+          "en": "Food offerings",
+          "zh": "供品"
+        },
+        {
+          "en": "Paper money and offerings",
+          "zh": "纸钱和供品"
+        },
+        {
+          "en": "Fruits and vegetables",
+          "zh": "水果蔬菜"
+        }
+      ]
+    },
+    {
+      "id": "mid-autumn",
+      "name": {
+        "en": "Mid-Autumn Festival",
+        "zh": "中秋节"
+      },
+      "date": {
+        "lunar": {
+          "month": 8,
+          "day": 15
+        }
+      },
+      "type": "major",
+      "description": {
+        "en": "Festival celebrating the full moon with family reunions and mooncakes",
+        "zh": "庆祝满月的节日，家庭团聚和月饼"
+      },
+      "preparations": [
+        {
+          "en": "Mooncakes",
+          "zh": "月饼"
+        },
+        {
+          "en": "Tea for moon viewing",
+          "zh": "赏月茶"
+        },
+        {
+          "en": "Fruits for offerings",
+          "zh": "供果"
+        },
+        {
+          "en": "Lanterns",
+          "zh": "灯笼"
+        }
+      ]
+    },
+    {
+      "id": "double-ninth",
+      "name": {
+        "en": "Double Ninth Festival (Chongyang)",
+        "zh": "重阳节"
+      },
+      "date": {
+        "lunar": {
+          "month": 9,
+          "day": 9
+        }
+      },
+      "type": "traditional",
+      "description": {
+        "en": "Festival for honoring elders, climbing mountains, and drinking chrysanthemum wine",
+        "zh": "敬老、登高、饮菊花酒的节日"
+      },
+      "preparations": [
+        {
+          "en": "Chrysanthemum wine",
+          "zh": "菊花酒"
+        },
+        {
+          "en": "Dogwood branches",
+          "zh": "茱萸枝"
+        },
+        {
+          "en": "Chrysanthemum flowers",
+          "zh": "菊花"
+        }
+      ]
+    },
+    {
+      "id": "winter-solstice",
+      "name": {
+        "en": "Winter Solstice Festival",
+        "zh": "冬至节"
+      },
+      "date": {
+        "lunar": {
+          "month": 11,
+          "day": 22
+        }
+      },
+      "type": "traditional",
+      "description": {
+        "en": "Festival marking the longest night and return of longer days",
+        "zh": "标志着最长夜晚和白天变长的节日"
+      },
+      "preparations": [
+        {
+          "en": "Tangyuan (sweet rice balls)",
+          "zh": "汤圆"
+        },
+        {
+          "en": "Dumplings",
+          "zh": "饺子"
+        },
+        {
+          "en": "Family reunion meal ingredients",
+          "zh": "家庭团聚餐食材"
+        }
+      ]
+    }
+  ]
+}

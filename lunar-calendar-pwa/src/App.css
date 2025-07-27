@@ -1,1 +1,17 @@
-@import "tailwindcss";
+/* Chinese Lunar Calendar Theme - Cultural Heritage */
+:root {
+  --color-primary: #ffd700; /* Gold */
+  --color-secondary: #ff4500; /* Orange Red */
+  --color-accent: #8b0000; /* Dark Red */
+  --color-background: #fff8dc; /* Cornsilk - warm background */
+  --color-surface: #ffffff;
+  --color-text: #2d2d2d;
+  --color-text-secondary: #666666;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
