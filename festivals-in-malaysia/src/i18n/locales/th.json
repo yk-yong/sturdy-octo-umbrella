@@ -1,0 +1,105 @@
+{
+  "app": {
+    "title": "เทศกาลในมาเลเซีย",
+    "description": "ค้นพบความหลากหลายทางวัฒนธรรมของมาเลเซียผ่านเทศกาลที่มีสีสัน"
+  },
+  "navigation": {
+    "home": "หน้าหลัก",
+    "about": "เกี่ยวกับ",
+    "contact": "ติดต่อ"
+  },
+  "search": {
+    "placeholder": "ค้นหาเทศกาล...",
+    "results": "ผลการค้นหา",
+    "noResults": "ไม่พบเทศกาลที่ตรงกับการค้นหาของคุณ",
+    "clear": "ล้างการค้นหา"
+  },
+  "filters": {
+    "category": "หมวดหมู่",
+    "region": "ภูมิภาค",
+    "month": "เดือน",
+    "all": "ทั้งหมด",
+    "reset": "รีเซ็ตตัวกรอง"
+  },
+  "categories": {
+    "all": "ทั้งหมด",
+    "religious": "ศาสนา",
+    "cultural": "วัฒนธรรม",
+    "national": "ชาติ",
+    "local": "ท้องถิ่น",
+    "notable": "น่าสนใจ"
+  },
+  "regions": {
+    "all": "ทั้งหมด",
+    "northern": "ภาคเหนือ",
+    "central": "ภาคกลาง",
+    "southern": "ภาคใต้",
+    "eastern": "ภาคตะวันออก",
+    "nationwide": "ทั่วประเทศ"
+  },
+  "months": {
+    "all": "ทั้งหมด",
+    "january": "มกราคม",
+    "february": "กุมภาพันธ์",
+    "march": "มีนาคม",
+    "april": "เมษายน",
+    "may": "พฤษภาคม",
+    "june": "มิถุนายน",
+    "july": "กรกฎาคม",
+    "august": "สิงหาคม",
+    "september": "กันยายน",
+    "october": "ตุลาคม",
+    "november": "พฤศจิกายน",
+    "december": "ธันวาคม"
+  },
+  "festival": {
+    "details": "รายละเอียดเทศกาล",
+    "description": "คำอธิบาย",
+    "significance": "ความสำคัญ",
+    "category": "หมวดหมู่",
+    "regions": "ภูมิภาค",
+    "date": "วันที่",
+    "practices": "การปฏิบัติ",
+    "keywords": "คำสำคัญ",
+    "relatedLinks": "ลิงก์ที่เกี่ยวข้อง",
+    "learnMore": "เรียนรู้เพิ่มเติม",
+    "viewDetails": "ดูรายละเอียด"
+  },
+  "statistics": {
+    "title": "สถิติเทศกาล",
+    "total": "เทศกาลทั้งหมด",
+    "religious": "ศาสนา",
+    "cultural": "วัฒนธรรม",
+    "national": "ชาติ",
+    "byRegion": "ตามภูมิภาค",
+    "byMonth": "ตามเดือน"
+  },
+  "modal": {
+    "close": "ปิด",
+    "previous": "ก่อนหน้า",
+    "next": "ถัดไป"
+  },
+  "footer": {
+    "copyright": "© 2025 เทศกาลในมาเลเซีย สงวนลิขสิทธิ์",
+    "madeWith": "สร้างด้วย",
+    "love": "ความรัก"
+  },
+  "loading": {
+    "festivals": "กำลังโหลดเทศกาล...",
+    "details": "กำลังโหลดรายละเอียด..."
+  },
+  "error": {
+    "generic": "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง",
+    "networkError": "ข้อผิดพลาดเครือข่าย กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ต",
+    "notFound": "ไม่พบเทศกาลที่คุณกำลังมองหา"
+  },
+  "accessibility": {
+    "skipToContent": "ข้ามไปที่เนื้อหา",
+    "toggleMenu": "เปิด/ปิดเมนู",
+    "searchButton": "ปุ่มค้นหา",
+    "languageSelector": "เลือกภาษา",
+    "closeModal": "ปิดป๊อปอัป",
+    "festivalImage": "รูปภาพเทศกาล",
+    "filterControls": "ตัวควบคุมตัวกรอง"
+  }
+}

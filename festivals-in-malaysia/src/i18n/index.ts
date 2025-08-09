@@ -6,6 +6,7 @@ import enTranslations from "./locales/en.json";
 import msTranslations from "./locales/ms.json";
 import zhTranslations from "./locales/zh.json";
 import jaTranslations from "./locales/ja.json";
+import thTranslations from "./locales/th.json";
 
 // Language resources
 const resources = {
@@ -20,6 +21,9 @@ const resources = {
   },
   ja: {
     translation: jaTranslations,
+  },
+  th: {
+    translation: thTranslations,
   },
 };
 
@@ -48,6 +52,12 @@ export const supportedLanguages = [
     name: "Japanese",
     nativeName: "日本語",
     flag: "🇯🇵",
+  },
+  {
+    code: "th",
+    name: "Thai",
+    nativeName: "ไทย",
+    flag: "🇹🇭",
   },
 ];
 

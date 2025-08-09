@@ -5,6 +5,7 @@ export interface MultiLanguageText {
   zh: string;
   ms: string; // Adding Malay for Malaysia-specific content
   ja: string; // Adding Japanese for international accessibility
+  th: string; // Adding Thai for international accessibility
 }
 
 // Festival categories as defined in PRD
@@ -66,7 +67,7 @@ export interface FilterState {
 }
 
 // Language options (consistent with i18n)
-export type Language = "en" | "zh" | "ms" | "ja";
+export type Language = "en" | "zh" | "ms" | "ja" | "th";
 
 // UI state interface (simplified since language is now handled by i18n)
 export interface UIState {
