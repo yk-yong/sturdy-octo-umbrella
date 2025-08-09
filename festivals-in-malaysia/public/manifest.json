@@ -1,0 +1,21 @@
+{
+  "name": "Festivals in Malaysia",
+  "short_name": "MY Festivals",
+  "description": "Explore Malaysia's rich cultural diversity and traditional festivals",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "travel", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr"
+}
