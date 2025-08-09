@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
-import type {
-  Festival,
-  Language,
-  CalendarView,
-  LunarDate,
-} from "../types/calendar";
+import type { Festival, CalendarView, LunarDate } from "../types/calendar";
 import { LunarCalendarUtils } from "../utils/lunarCalendar";
 import FestivalDetail from "./FestivalDetail";
 import EventForm, { type PersonalEvent } from "./EventForm";
 import festivalData from "../data/lunarFestivals.json";
+
+const language: "zh" | "en" = "zh";
 
 function LunarCalendar() {
   const [currentDate, setCurrentDate] = useState<LunarDate>({
@@ -16,7 +13,6 @@ function LunarCalendar() {
     day: 1,
   });
   const [selectedMonth, setSelectedMonth] = useState<number>(1);
-  const [language, setLanguage] = useState<Language>("zh");
   const [view, setView] = useState<CalendarView>("month");
   const [festivals] = useState<Festival[]>(
     festivalData.festivals as Festival[]
@@ -79,11 +75,6 @@ function LunarCalendar() {
     return personalEvents.filter((event) =>
       LunarCalendarUtils.isSameDate(event.date, date)
     );
-  };
-
-  const handleLanguageToggle = () => {
-    const newLanguage = language === "en" ? "zh" : "en";
-    setLanguage(newLanguage);
   };
 
   const handleViewToggle = () => {
@@ -290,7 +281,7 @@ function LunarCalendar() {
     const months = Array.from({ length: 12 }, (_, i) => i + 1);
 
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className="bg-white rounded-lg shadow-lg p-2 sm:p-6">
         <h2 className="text-2xl font-bold text-red-900 mb-6 text-center">
           {language === "zh" ? "农历年历" : "Lunar Year Calendar"}
         </h2>
@@ -351,6 +342,18 @@ function LunarCalendar() {
     );
   };
 
+  function monthOrYearLabel() {
+    if (view === "month") {
+      return language === "zh" ? "月视图" : "Month View";
+    }
+
+    if (view === "year") {
+      return language === "zh" ? "年视图" : "Year View";
+    }
+
+    return "";
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50 p-4">
       <div className="max-w-4xl mx-auto">
@@ -372,24 +375,10 @@ function LunarCalendar() {
 
               <button
                 type="button"
-                onClick={handleLanguageToggle}
-                className="px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-red-900 font-semibold rounded-lg transition-colors"
-              >
-                {language === "zh" ? "English" : "中文"}
-              </button>
-
-              <button
-                type="button"
                 onClick={handleViewToggle}
                 className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors"
               >
-                {view === "month"
-                  ? language === "zh"
-                    ? "年视图"
-                    : "Year View"
-                  : language === "zh"
-                  ? "月视图"
-                  : "Month View"}
+                {monthOrYearLabel()}
               </button>
             </div>
           </div>
