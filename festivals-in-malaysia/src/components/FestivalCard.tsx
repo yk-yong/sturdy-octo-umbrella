@@ -75,7 +75,7 @@ export const FestivalCard = ({ festival, onClick }: FestivalCardProps) => {
         <div className="absolute bottom-3 left-3">
           <span
             className="
-            bg-white bg-opacity-90 backdrop-blur-sm px-2 py-1 
+            bg-white/90 backdrop-blur-sm px-2 py-1 
             rounded-md text-xs font-medium text-gray-800
           "
           >

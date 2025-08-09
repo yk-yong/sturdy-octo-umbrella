@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 import enTranslations from "./locales/en.json";
 import msTranslations from "./locales/ms.json";
 import zhTranslations from "./locales/zh.json";
+import jaTranslations from "./locales/ja.json";
 
 // Language resources
 const resources = {
@@ -16,6 +17,9 @@ const resources = {
   },
   zh: {
     translation: zhTranslations,
+  },
+  ja: {
+    translation: jaTranslations,
   },
 };
 
@@ -38,6 +42,12 @@ export const supportedLanguages = [
     name: "Chinese",
     nativeName: "中文",
     flag: "🇨🇳",
+  },
+  {
+    code: "ja",
+    name: "Japanese",
+    nativeName: "日本語",
+    flag: "🇯🇵",
   },
 ];
 

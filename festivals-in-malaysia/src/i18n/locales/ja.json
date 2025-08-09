@@ -1,0 +1,74 @@
+{
+  "app": {
+    "title": "マレーシアの祭り",
+    "subtitle": "マレーシアの豊かな文化の多様性と伝統を探る"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "about": "について",
+    "festivals": "祭り"
+  },
+  "search": {
+    "placeholder": "名前またはキーワードで検索...",
+    "label": "祭りを検索",
+    "noResults": "祭りが見つかりません",
+    "noResultsDescription": "検索条件を調整してみてください",
+    "resultsCount": "{{total}}個中{{count}}個の祭りを表示"
+  },
+  "filters": {
+    "category": "カテゴリー",
+    "region": "地域",
+    "clearAll": "すべてクリア",
+    "allCategories": "すべてのカテゴリー",
+    "allRegions": "すべての地域"
+  },
+  "categories": {
+    "religious": "宗教的",
+    "cultural": "文化的",
+    "national": "国家的",
+    "local": "地域の",
+    "notable": "注目すべき"
+  },
+  "regions": {
+    "nationwide": "全国",
+    "northern": "北部地域",
+    "central": "中部地域",
+    "southern": "南部地域",
+    "eastern": "東部地域"
+  },
+  "festival": {
+    "learnMore": "詳しく見る",
+    "description": "説明",
+    "significance": "意義",
+    "culturalPractices": "文化的慣行",
+    "relatedLinks": "関連リンク",
+    "video": "動画",
+    "date": "日付",
+    "category": "カテゴリー",
+    "regions": "地域"
+  },
+  "statistics": {
+    "showing": "表示中",
+    "of": "件中",
+    "festivals": "祭り",
+    "categories": "カテゴリー",
+    "regions": "地域"
+  },
+  "modal": {
+    "close": "閉じる",
+    "closeAriaLabel": "モーダルを閉じる"
+  },
+  "footer": {
+    "description": "マレーシアの文化的多様性を探る",
+    "builtWith": "マレーシアの伝統を理解するために❤️で作られました"
+  },
+  "accessibility": {
+    "switchLanguage": "{{language}}に切り替え",
+    "festivalImage": "{{name}}祭りの画像",
+    "openFestival": "{{name}}祭りの詳細を開く"
+  },
+  "learnMore": "詳しく見る",
+  "clickDetails": "詳細をクリック",
+  "noFestivalsFound": "祭りが見つかりません",
+  "adjustSearchCriteria": "検索条件を調整してみてください"
+}

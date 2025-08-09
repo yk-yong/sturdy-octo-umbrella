@@ -4,17 +4,20 @@
     "name": {
       "en": "Chinese New Year",
       "zh": "农历新年",
-      "ms": "Tahun Baru Cina"
+      "ms": "Tahun Baru Cina",
+      "ja": "中国の旧正月"
     },
     "description": {
       "en": "The most important celebration in Chinese culture, marking the beginning of the lunar new year with family reunions, festive meals, and traditional customs.",
       "zh": "中华文化中最重要的庆祝活动，标志着农历新年的开始，有家庭团聚、节日餐食和传统习俗。",
-      "ms": "Perayaan terpenting dalam budaya Cina, menandakan permulaan tahun baru lunar dengan reunion keluarga, jamuan meriah, dan adat tradisi."
+      "ms": "Perayaan terpenting dalam budaya Cina, menandakan permulaan tahun baru lunar dengan reunion keluarga, jamuan meriah, dan adat tradisi.",
+      "ja": "中華文化で最も重要な祝祭で、旧正月の始まりを祝い、家族の再会、祭典の食事、伝統的な習慣を行います。"
     },
     "significance": {
       "en": "Represents new beginnings, family unity, and prosperity for the coming year.",
       "zh": "代表新的开始、家庭团结和来年的繁荣。",
-      "ms": "Melambangkan permulaan baru, perpaduan keluarga, dan kemakmuran untuk tahun yang akan datang."
+      "ms": "Melambangkan permulaan baru, perpaduan keluarga, dan kemakmuran untuk tahun yang akan datang.",
+      "ja": "新しい始まり、家族の結束、来年の繁栄を表しています。"
     },
     "category": "religious",
     "regions": ["nationwide"],
@@ -22,7 +25,8 @@
       "variable": {
         "en": "First day of the first lunar month",
         "zh": "农历正月初一",
-        "ms": "Hari pertama bulan lunar pertama"
+        "ms": "Hari pertama bulan lunar pertama",
+        "ja": "旧暦1月1日"
       },
       "currentYear": "2025-01-29",
       "month": 1
@@ -30,26 +34,36 @@
     "imageUrl": "/images/chinese-new-year.jpg",
     "practices": [
       {
-        "en": "Lion and dragon dances",
-        "zh": "舞狮舞龙",
-        "ms": "Tarian singa dan naga"
+        "en": "Morning prayers and sermons",
+        "zh": "晨祷和布道",
+        "ms": "Solat dan khutbah pagi",
+        "ja": "朝の祈りと説教"
       },
       {
-        "en": "Red envelope giving (Ang Pau)",
-        "zh": "发红包",
-        "ms": "Pemberian sampul merah (Ang Pau)"
+        "en": "Visiting family and friends",
+        "zh": "拜访家人和朋友",
+        "ms": "Melawat keluarga dan rakan",
+        "ja": "家族や友人を訪問"
       },
       {
-        "en": "Family reunion dinner",
-        "zh": "团圆饭",
-        "ms": "Makan malam reunion keluarga"
+        "en": "Giving money (duit raya) to children",
+        "zh": "给孩子们红包（开斋节钱）",
+        "ms": "Memberi wang raya kepada kanak-kanak",
+        "ja": "子供たちにお金（ドゥイット・ラヤ）を贈る"
+      },
+      {
+        "en": "Sharing festive meals",
+        "zh": "分享节日大餐",
+        "ms": "Berkongsi hidangan perayaan",
+        "ja": "祝祭の食事を共有"
       }
     ],
     "keywords": [
       {
         "en": "lunar new year, spring festival, reunion",
         "zh": "农历新年, 春节, 团圆",
-        "ms": "tahun baru lunar, festival musim bunga, reunion"
+        "ms": "tahun baru lunar, festival musim bunga, reunion",
+        "ja": "旧正月, 春節, 家族団らん"
       }
     ]
   },
@@ -58,28 +72,30 @@
     "name": {
       "en": "Hari Raya Aidilfitri",
       "zh": "开斋节",
-      "ms": "Hari Raya Aidilfitri"
+      "ms": "Hari Raya Aidilfitri",
+      "ja": "ハリラヤ・アイディルフィトリ"
     },
     "description": {
       "en": "The festival marking the end of Ramadan, celebrated by Muslims worldwide with prayers, feasting, and visiting family and friends.",
       "zh": "标志着斋月结束的节日，全世界的穆斯林通过祈祷、盛宴以及拜访家人朋友来庆祝。",
-      "ms": "Perayaan yang menandakan berakhirnya bulan Ramadan, disambut oleh umat Islam di seluruh dunia dengan solat, jamuan, dan melawat keluarga serta kawan-kawan."
+      "ms": "Perayaan yang menandakan berakhirnya bulan Ramadan, disambut oleh umat Islam di seluruh dunia dengan solat, jamuan, dan melawat keluarga serta kawan-kawan.",
+      "ja": "ラマダンの終わりを祝う祭りで、世界中のイスラム教徒が祈り、饗宴、家族や友人の訪問で祝います。"
     },
     "significance": {
       "en": "Celebrates spiritual cleansing, self-discipline, and community bonds strengthened during Ramadan.",
       "zh": "庆祝精神净化、自律和在斋月期间加强的社区纽带。",
-      "ms": "Meraikan pembersihan rohani, disiplin diri, dan ikatan komuniti yang diperkukuh semasa Ramadan."
+      "ms": "Meraikan pembersihan rohani, disiplin diri, dan ikatan komuniti yang diperkukuh semasa Ramadan.",
+      "ja": "ラマダン期間中に強化された精神的浄化、自己規律、コミュニティの絆を祝います。"
     },
     "category": "religious",
     "regions": ["nationwide"],
     "date": {
       "variable": {
-        "en": "First day of Shawwal (10th month of Islamic calendar)",
-        "zh": "伊斯兰历十月初一",
-        "ms": "Hari pertama Syawal (bulan ke-10 kalendar Islam)"
-      },
-      "currentYear": "2025-03-31",
-      "month": 3
+        "en": "Determined by lunar calendar (Syawal 1)",
+        "zh": "由农历决定（闪瓦月1日）",
+        "ms": "Ditentukan oleh kalendar lunar (1 Syawal)",
+        "ja": "太陰暦によって決定（シャワール月1日）"
+      }
     },
     "imageUrl": "/images/hari-raya.jpg",
     "practices": [
@@ -108,7 +124,8 @@
       {
         "en": "eid, ramadan, fasting, islamic, open house",
         "zh": "开斋节, 斋月, 禁食, 伊斯兰, 开放屋",
-        "ms": "eid, ramadan, puasa, islam, rumah terbuka"
+        "ms": "eid, ramadan, puasa, islam, rumah terbuka",
+        "ja": "イード, ラマダン, 断食, イスラム, オープンハウス"
       }
     ]
   },
@@ -117,17 +134,20 @@
     "name": {
       "en": "Deepavali",
       "zh": "屠妖节",
-      "ms": "Deepavali"
+      "ms": "Deepavali",
+      "ja": "ディーパバリ"
     },
     "description": {
       "en": "The Hindu festival of lights celebrating the victory of light over darkness, good over evil, and knowledge over ignorance.",
       "zh": "印度教的灯节，庆祝光明战胜黑暗、善良战胜邪恶、知识战胜无知。",
-      "ms": "Perayaan Hindu festival cahaya yang meraikan kemenangan cahaya ke atas kegelapan, kebaikan ke atas kejahatan, dan pengetahuan ke atas kejahilan."
+      "ms": "Perayaan Hindu festival cahaya yang meraikan kemenangan cahaya ke atas kegelapan, kebaikan ke atas kejahatan, dan pengetahuan ke atas kejahilan.",
+      "ja": "光が闇に、善が悪に、知識が無知に勝利することを祝うヒンドゥー教の光の祭り。"
     },
     "significance": {
       "en": "Symbolizes spiritual enlightenment, prosperity, and the triumph of divine forces.",
       "zh": "象征精神启蒙、繁荣和神圣力量的胜利。",
-      "ms": "Melambangkan pencerahan rohani, kemakmuran, dan kemenangan kuasa ilahi."
+      "ms": "Melambangkan pencerahan rohani, kemakmuran, dan kemenangan kuasa ilahi.",
+      "ja": "精神的悟り、繁栄、そして神的力の勝利を象徴します。"
     },
     "category": "religious",
     "regions": ["nationwide"],
@@ -135,7 +155,8 @@
       "variable": {
         "en": "New moon day in the Hindu month of Kartik",
         "zh": "印度历卡尔蒂克月的新月日",
-        "ms": "Hari bulan baru dalam bulan Hindu Kartik"
+        "ms": "Hari bulan baru dalam bulan Hindu Kartik",
+        "ja": "ヒンドゥー暦カルティク月の新月の日"
       },
       "currentYear": "2025-10-20",
       "month": 10
@@ -145,29 +166,34 @@
       {
         "en": "Oil lamp lighting",
         "zh": "点油灯",
-        "ms": "Menyalakan pelita minyak"
+        "ms": "Menyalakan pelita minyak",
+        "ja": "オイルランプの点灯"
       },
       {
         "en": "Rangoli decorations",
         "zh": "兰戈利装饰",
-        "ms": "Hiasan rangoli"
+        "ms": "Hiasan rangoli",
+        "ja": "ランゴーリ装飾"
       },
       {
         "en": "Traditional sweets sharing",
         "zh": "分享传统甜品",
-        "ms": "Berkongsi kuih-muih tradisional"
+        "ms": "Berkongsi kuih-muih tradisional",
+        "ja": "伝統的なお菓子の共有"
       },
       {
         "en": "Fireworks and celebrations",
         "zh": "烟花和庆祝活动",
-        "ms": "Bunga api dan perayaan"
+        "ms": "Bunga api dan perayaan",
+        "ja": "花火とお祝い"
       }
     ],
     "keywords": [
       {
         "en": "lights, lamps, hindu, diwali, prosperity",
         "zh": "灯光, 油灯, 印度教, 排灯节, 繁荣",
-        "ms": "cahaya, pelita, hindu, diwali, kemakmuran"
+        "ms": "cahaya, pelita, hindu, diwali, kemakmuran",
+        "ja": "光, ランプ, ヒンドゥー教, ディワリ, 繁栄"
       }
     ]
   },
@@ -176,17 +202,20 @@
     "name": {
       "en": "Christmas",
       "zh": "圣诞节",
-      "ms": "Krismas"
+      "ms": "Krismas",
+      "ja": "クリスマス"
     },
     "description": {
       "en": "Christian celebration of the birth of Jesus Christ, observed with church services, gift-giving, and family gatherings.",
       "zh": "基督教庆祝耶稣基督诞生的节日，通过教堂礼拜、赠送礼物和家庭聚会来庆祝。",
-      "ms": "Perayaan Kristian kelahiran Yesus Kristus, disambut dengan kebaktian gereja, pemberian hadiah, dan perhimpunan keluarga."
+      "ms": "Perayaan Kristian kelahiran Yesus Kristus, disambut dengan kebaktian gereja, pemberian hadiah, dan perhimpunan keluarga.",
+      "ja": "イエス・キリストの誕生を祝うキリスト教の祭り。教会での礼拝、贈り物の交換、家族の集まりで祝われます。"
     },
     "significance": {
       "en": "Commemorates the birth of Jesus Christ and emphasizes love, peace, and goodwill.",
       "zh": "纪念耶稣基督的诞生，强调爱、和平和善意。",
-      "ms": "Memperingati kelahiran Yesus Kristus dan menekankan kasih sayang, keamanan, dan niat baik."
+      "ms": "Memperingati kelahiran Yesus Kristus dan menekankan kasih sayang, keamanan, dan niat baik.",
+      "ja": "イエス・キリストの誕生を記念し、愛、平和、善意を強調します。"
     },
     "category": "religious",
     "regions": ["nationwide"],
@@ -200,29 +229,34 @@
       {
         "en": "Christmas tree decoration",
         "zh": "装饰圣诞树",
-        "ms": "Menghias pokok Krismas"
+        "ms": "Menghias pokok Krismas",
+        "ja": "クリスマスツリーの装飾"
       },
       {
         "en": "Church services",
         "zh": "教堂礼拜",
-        "ms": "Kebaktian gereja"
+        "ms": "Kebaktian gereja",
+        "ja": "教会での礼拝"
       },
       {
         "en": "Gift exchange",
         "zh": "交换礼物",
-        "ms": "Pertukaran hadiah"
+        "ms": "Pertukaran hadiah",
+        "ja": "プレゼント交換"
       },
       {
         "en": "Christmas carols",
         "zh": "圣诞颂歌",
-        "ms": "Lagu-lagu Krismas"
+        "ms": "Lagu-lagu Krismas",
+        "ja": "クリスマスキャロル"
       }
     ],
     "keywords": [
       {
         "en": "christmas, jesus, christian, gifts, carols",
         "zh": "圣诞节, 耶稣, 基督教, 礼物, 颂歌",
-        "ms": "krismas, yesus, kristian, hadiah, lagu"
+        "ms": "krismas, yesus, kristian, hadiah, lagu",
+        "ja": "クリスマス, イエス, キリスト教, プレゼント, キャロル"
       }
     ]
   },
@@ -231,17 +265,20 @@
     "name": {
       "en": "Merdeka Day",
       "zh": "独立日",
-      "ms": "Hari Merdeka"
+      "ms": "Hari Merdeka",
+      "ja": "独立記念日"
     },
     "description": {
       "en": "Malaysia's Independence Day celebrating the nation's freedom from British colonial rule on August 31, 1957.",
       "zh": "马来西亚独立日，庆祝1957年8月31日国家摆脱英国殖民统治获得自由。",
-      "ms": "Hari Kemerdekaan Malaysia meraikan kebebasan negara daripada pemerintahan kolonial British pada 31 Ogos 1957."
+      "ms": "Hari Kemerdekaan Malaysia meraikan kebebasan negara daripada pemerintahan kolonial British pada 31 Ogos 1957.",
+      "ja": "1957年8月31日にイギリス植民地支配からの解放を祝うマレーシアの独立記念日。"
     },
     "significance": {
       "en": "Marks the birth of Malaysia as an independent nation and celebrates national unity and sovereignty.",
       "zh": "标志着马来西亚作为独立国家的诞生，庆祝国家团结和主权。",
-      "ms": "Menandakan kelahiran Malaysia sebagai negara merdeka dan meraikan perpaduan nasional serta kedaulatan."
+      "ms": "Menandakan kelahiran Malaysia sebagai negara merdeka dan meraikan perpaduan nasional serta kedaulatan.",
+      "ja": "マレーシアが独立国家として誕生したことを記念し、国民の団結と主権を祝います。"
     },
     "category": "national",
     "regions": ["nationwide"],
@@ -255,29 +292,34 @@
       {
         "en": "Flag raising ceremonies",
         "zh": "升旗仪式",
-        "ms": "Upacara mengibar bendera"
+        "ms": "Upacara mengibar bendera",
+        "ja": "国旗掲揚式"
       },
       {
         "en": "Patriotic parades",
         "zh": "爱国游行",
-        "ms": "Perarakan patriotik"
+        "ms": "Perarakan patriotik",
+        "ja": "愛国パレード"
       },
       {
         "en": "National anthem singing",
         "zh": "唱国歌",
-        "ms": "Menyanyikan lagu kebangsaan"
+        "ms": "Menyanyikan lagu kebangsaan",
+        "ja": "国歌斉唱"
       },
       {
         "en": "Traditional performances",
         "zh": "传统表演",
-        "ms": "Persembahan tradisional"
+        "ms": "Persembahan tradisional",
+        "ja": "伝統的なパフォーマンス"
       }
     ],
     "keywords": [
       {
         "en": "independence, merdeka, malaysia, freedom, national",
         "zh": "独立, 默迪卡, 马来西亚, 自由, 国家",
-        "ms": "kemerdekaan, merdeka, malaysia, kebebasan, nasional"
+        "ms": "kemerdekaan, merdeka, malaysia, kebebasan, nasional",
+        "ja": "独立, メルデカ, マレーシア, 自由, 国家"
       }
     ]
   },
@@ -286,17 +328,20 @@
     "name": {
       "en": "Thaipusam",
       "zh": "大宝森节",
-      "ms": "Thaipusam"
+      "ms": "Thaipusam",
+      "ja": "タイプーサム"
     },
     "description": {
       "en": "A Hindu festival dedicated to Lord Murugan, featuring elaborate processions and acts of devotion including kavadi carrying.",
       "zh": "献给穆鲁甘神的印度教节日，以精心的游行和包括担卡瓦迪在内的虔诚行为为特色。",
-      "ms": "Perayaan Hindu yang didedikasikan kepada Tuhan Murugan, menampilkan perarakan yang rumit dan perbuatan devosi termasuk memanggul kavadi."
+      "ms": "Perayaan Hindu yang didedikasikan kepada Tuhan Murugan, menampilkan perarakan yang rumit dan perbuatan devosi termasuk memanggul kavadi.",
+      "ja": "ムルガン神に捧げられるヒンドゥー教の祭り。精巧な行列とカヴァディ担ぎを含む献身的な行為が特徴です。"
     },
     "significance": {
       "en": "Demonstrates devotion, penance, and thanksgiving to Lord Murugan for answered prayers and blessings.",
       "zh": "向穆鲁甘神表达虔诚、忏悔和感恩，感谢祈祷得到回应和祝福。",
-      "ms": "Menunjukkan devosi, taubat, dan kesyukuran kepada Tuhan Murugan atas doa yang dimakbulkan dan berkat."
+      "ms": "Menunjukkan devosi, taubat, dan kesyukuran kepada Tuhan Murugan atas doa yang dimakbulkan dan berkat.",
+      "ja": "ムルガン神への献身、悔い改め、祈りが聞き入れられたことと祝福への感謝を示します。"
     },
     "category": "religious",
     "regions": ["central", "northern"],
@@ -304,7 +349,8 @@
       "variable": {
         "en": "Full moon day in the Tamil month of Thai",
         "zh": "泰米尔历泰月满月日",
-        "ms": "Hari bulan penuh dalam bulan Tamil Thai"
+        "ms": "Hari bulan penuh dalam bulan Tamil Thai",
+        "ja": "タミル暦タイ月の満月の日"
       },
       "currentYear": "2025-02-11",
       "month": 2
@@ -314,29 +360,34 @@
       {
         "en": "Kavadi carrying",
         "zh": "担卡瓦迪",
-        "ms": "Memikul kavadi"
+        "ms": "Memikul kavadi",
+        "ja": "カヴァディ担ぎ"
       },
       {
         "en": "Temple processions",
         "zh": "寺庙游行",
-        "ms": "Perarakan kuil"
+        "ms": "Perarakan kuil",
+        "ja": "寺院の行列"
       },
       {
         "en": "Body piercing as penance",
         "zh": "穿体作为忏悔",
-        "ms": "Menindik badan sebagai taubat"
+        "ms": "Menindik badan sebagai taubat",
+        "ja": "悔い改めとしての体のピアス"
       },
       {
         "en": "Milk offering",
         "zh": "牛奶供奉",
-        "ms": "Persembahan susu"
+        "ms": "Persembahan susu",
+        "ja": "ミルクの奉納"
       }
     ],
     "keywords": [
       {
         "en": "thaipusam, murugan, kavadi, hindu, devotion",
         "zh": "大宝森节, 穆鲁甘, 卡瓦迪, 印度教, 虔诚",
-        "ms": "thaipusam, murugan, kavadi, hindu, devosi"
+        "ms": "thaipusam, murugan, kavadi, hindu, devosi",
+        "ja": "タイプーサム, ムルガン, カヴァディ, ヒンドゥー教, 献身"
       }
     ]
   }
