@@ -1,0 +1,74 @@
+{
+  "app": {
+    "title": "Festivals in Malaysia",
+    "subtitle": "Explore Malaysia's rich cultural diversity and traditions"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "festivals": "Festivals"
+  },
+  "search": {
+    "placeholder": "Search by name or keywords...",
+    "label": "Search Festivals",
+    "noResults": "No festivals found",
+    "noResultsDescription": "Try adjusting your search criteria",
+    "resultsCount": "Showing {{count}} of {{total}} festivals"
+  },
+  "filters": {
+    "category": "Category",
+    "region": "Region",
+    "clearAll": "Clear All",
+    "allCategories": "All Categories",
+    "allRegions": "All Regions"
+  },
+  "categories": {
+    "religious": "Religious",
+    "cultural": "Cultural",
+    "national": "National", 
+    "local": "Local",
+    "notable": "Notable"
+  },
+  "regions": {
+    "nationwide": "Nationwide",
+    "northern": "Northern Region",
+    "central": "Central Region",
+    "southern": "Southern Region",
+    "eastern": "Eastern Region"
+  },
+  "festival": {
+    "learnMore": "Learn More",
+    "description": "Description",
+    "significance": "Significance",
+    "culturalPractices": "Cultural Practices",
+    "relatedLinks": "Related Links",
+    "video": "Video",
+    "date": "Date",
+    "category": "Category",
+    "regions": "Regions"
+  },
+  "statistics": {
+    "showing": "Showing",
+    "of": "of",
+    "festivals": "festivals",
+    "categories": "Categories",
+    "regions": "Regions"
+  },
+  "modal": {
+    "close": "Close",
+    "closeAriaLabel": "Close modal"
+  },
+  "footer": {
+    "description": "Exploring Malaysia's Cultural Diversity",
+    "builtWith": "Built with ❤️ to understand Malaysian traditions"
+  },
+  "accessibility": {
+    "switchLanguage": "Switch to {{language}}",
+    "festivalImage": "{{name}} festival image",
+    "openFestival": "Open {{name}} festival details"
+  },
+  "learnMore": "Learn More",
+  "clickDetails": "Click for details",
+  "noFestivalsFound": "No festivals found",
+  "adjustSearchCriteria": "Try adjusting your search criteria"
+}

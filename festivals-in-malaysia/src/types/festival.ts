@@ -1,4 +1,5 @@
 // Multi-language text interface following workspace pattern
+// Note: We're keeping this for existing festival data compatibility
 export interface MultiLanguageText {
   en: string;
   zh: string;
@@ -63,12 +64,11 @@ export interface FilterState {
   searchQuery: string;
 }
 
-// Language options
+// Language options (consistent with i18n)
 export type Language = "en" | "zh" | "ms";
 
-// UI state interface
+// UI state interface (simplified since language is now handled by i18n)
 export interface UIState {
-  language: Language;
   selectedFestival: Festival | null;
   isDetailModalOpen: boolean;
 }

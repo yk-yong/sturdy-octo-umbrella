@@ -1,18 +1,15 @@
 import { useState } from "react";
-import type { Festival, Language } from "../types/festival";
-import { getLocalizedText, formatFestivalDate } from "../utils/festivalUtils";
+import { useI18n, getLocalizedText } from "../i18n/useI18n";
+import type { Festival } from "../types/festival";
+import { formatFestivalDate } from "../utils/festivalUtils";
 
 interface FestivalCardProps {
   festival: Festival;
-  language: Language;
   onClick: (festival: Festival) => void;
 }
 
-export const FestivalCard = ({
-  festival,
-  language,
-  onClick,
-}: FestivalCardProps) => {
+export const FestivalCard = ({ festival, onClick }: FestivalCardProps) => {
+  const { t, currentLanguage } = useI18n();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
@@ -36,19 +33,8 @@ export const FestivalCard = ({
     }
   };
 
-  const getCategoryText = (category: string) => {
-    const categoryTexts = {
-      religious: { en: "Religious", zh: "宗教", ms: "Keagamaan" },
-      cultural: { en: "Cultural", zh: "文化", ms: "Budaya" },
-      national: { en: "National", zh: "国家", ms: "Nasional" },
-      local: { en: "Local", zh: "地方", ms: "Tempatan" },
-      notable: { en: "Notable", zh: "著名", ms: "Terkenal" },
-    };
-
-    const categoryText = categoryTexts[category as keyof typeof categoryTexts];
-    if (!categoryText) return category;
-
-    return categoryText[language] || categoryText.en;
+  const getCategoryText = () => {
+    return t(`categories.${festival.category.toLowerCase()}`);
   };
 
   return (
@@ -68,13 +54,8 @@ export const FestivalCard = ({
         {festival.imageUrl ? (
           <img
             src={festival.imageUrl}
-            alt={getLocalizedText(festival.name, language)}
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              // Fallback to gradient background if image fails to load
-              const target = e.target as HTMLImageElement;
-              target.style.display = "none";
-            }}
+            alt={getLocalizedText(festival.name, currentLanguage)}
+            className="w-full h-56 object-cover rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105"
           />
         ) : null}
 
@@ -86,7 +67,7 @@ export const FestivalCard = ({
             ${getCategoryColor(festival.category)}
           `}
           >
-            {getCategoryText(festival.category)}
+            {getCategoryText()}
           </span>
         </div>
 
@@ -98,7 +79,7 @@ export const FestivalCard = ({
             rounded-md text-xs font-medium text-gray-800
           "
           >
-            {formatFestivalDate(festival, language)}
+            {formatFestivalDate(festival, currentLanguage)}
           </span>
         </div>
       </div>
@@ -107,43 +88,25 @@ export const FestivalCard = ({
       <div className="p-4">
         {/* Festival Name */}
         <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-          {getLocalizedText(festival.name, language)}
+          {getLocalizedText(festival.name, currentLanguage)}
         </h3>
 
         {/* Festival Description */}
         <p className="text-gray-600 text-sm line-clamp-3 mb-3">
-          {getLocalizedText(festival.description, language)}
+          {getLocalizedText(festival.description, currentLanguage)}
         </p>
 
         {/* Regions */}
         <div className="flex flex-wrap gap-1 mb-3">
-          {festival.regions.map((region) => (
-            <span
-              key={region}
-              className="
-                bg-gray-100 text-gray-700 px-2 py-1 rounded-md
-                text-xs font-medium capitalize
-              "
-            >
-              {region === "nationwide"
-                ? language === "ms"
-                  ? "Seluruh negara"
-                  : language === "zh"
-                  ? "全国"
-                  : "Nationwide"
-                : region}
-            </span>
-          ))}
+          {festival.regions && festival.regions.length > 0
+            ? t(`regions.${festival.regions[0].toLowerCase()}`)
+            : t("regions.nationwide")}
         </div>
 
         {/* Learn More */}
         <div className="flex items-center justify-between">
           <span className="text-blue-600 text-sm font-medium">
-            {language === "ms"
-              ? "Ketahui Lebih Lanjut"
-              : language === "zh"
-              ? "了解更多"
-              : "Learn More"}
+            {t("learnMore")}
           </span>
           <svg
             className={`w-4 h-4 text-blue-600 transform transition-transform duration-300 ${

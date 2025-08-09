@@ -1,0 +1,81 @@
+{
+  "app": {
+    "title": "Festival di Malaysia",
+    "subtitle": "Jelajahi kepelbagaian budaya dan tradisi Malaysia"
+  },
+  "navigation": {
+    "home": "Laman Utama",
+    "about": "Tentang",
+    "festivals": "Festival"
+  },
+  "search": {
+    "placeholder": "Cari mengikut nama atau kata kunci...",
+    "label": "Cari Festival",
+    "noResults": "Tiada festival dijumpai",
+    "noResultsDescription": "Cuba ubah kriteria carian anda",
+    "resultsCount": "Menunjukkan {{count}} daripada {{total}} festival"
+  },
+  "filters": {
+    "category": "Kategori",
+    "region": "Wilayah",
+    "clearAll": "Kosongkan Semua",
+    "allCategories": "Semua Kategori",
+    "allRegions": "Semua Wilayah"
+  },
+  "categories": {
+    "religious": "Keagamaan",
+    "cultural": "Budaya",
+    "national": "Nasional",
+    "local": "Tempatan",
+    "notable": "Terkenal"
+  },
+  "regions": {
+    "nationwide": "Seluruh Negara",
+    "northern": "Wilayah Utara",
+    "central": "Wilayah Tengah",
+    "southern": "Wilayah Selatan",
+    "eastern": "Wilayah Timur"
+  },
+  "festival": {
+    "learnMore": "Ketahui Lebih Lanjut",
+    "description": "Penerangan",
+    "significance": "Kepentingan",
+    "culturalPractices": "Amalan Budaya",
+    "relatedLinks": "Pautan Berkaitan",
+    "video": "Video",
+    "date": "Tarikh",
+    "category": "Kategori",
+    "regions": "Wilayah"
+  },
+  "statistics": {
+    "showing": "Menunjukkan",
+    "of": "daripada",
+    "festivals": "festival",
+    "categories": "Kategori",
+    "regions": "Wilayah"
+  },
+  "modal": {
+    "close": "Tutup",
+    "closeAriaLabel": "Tutup modal"
+  },
+  "footer": {
+    "description": "Menerokai kepelbagaian budaya Malaysia",
+    "builtWith": "Dibina dengan ❤️ untuk memahami tradisi Malaysia"
+  },
+  "accessibility": {
+    "switchLanguage": "Tukar ke {{language}}",
+    "festivalImage": "Imej festival {{name}}",
+    "openFestival": "Buka butiran festival {{name}}"
+  },
+  "statistics": {
+    "showing": "Menunjukkan",
+    "of": "daripada",
+    "festivals": "festival",
+    "categories": "Kategori",
+    "regions": "Wilayah"
+  },
+  "learnMore": "Ketahui Lebih Lanjut",
+  "clickDetails": "Klik untuk maklumat lanjut",
+  "noFestivalsFound": "Tiada festival dijumpai",
+  "adjustSearchCriteria": "Cuba ubah kriteria carian anda"
+}

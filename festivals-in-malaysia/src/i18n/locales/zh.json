@@ -1,0 +1,81 @@
+{
+  "app": {
+    "title": "马来西亚节日",
+    "subtitle": "探索马来西亚丰富的文化和传统"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "festivals": "节日"
+  },
+  "search": {
+    "placeholder": "按名称或关键词搜索...",
+    "label": "搜索节日",
+    "noResults": "未找到节日",
+    "noResultsDescription": "请尝试调整搜索条件",
+    "resultsCount": "显示 {{count}} 个节日，共 {{total}} 个"
+  },
+  "filters": {
+    "category": "类别",
+    "region": "地区",
+    "clearAll": "清除全部",
+    "allCategories": "所有类别",
+    "allRegions": "所有地区"
+  },
+  "categories": {
+    "religious": "宗教",
+    "cultural": "文化",
+    "national": "国家",
+    "local": "地方",
+    "notable": "著名"
+  },
+  "regions": {
+    "nationwide": "全国",
+    "northern": "北部地区",
+    "central": "中部地区",
+    "southern": "南部地区",
+    "eastern": "东部地区"
+  },
+  "festival": {
+    "learnMore": "了解更多",
+    "description": "描述",
+    "significance": "意义",
+    "culturalPractices": "文化习俗",
+    "relatedLinks": "相关链接",
+    "video": "视频",
+    "date": "日期",
+    "category": "类别",
+    "regions": "地区"
+  },
+  "statistics": {
+    "showing": "显示",
+    "of": "个中的",
+    "festivals": "个节日",
+    "categories": "类别",
+    "regions": "地区"
+  },
+  "modal": {
+    "close": "关闭",
+    "closeAriaLabel": "关闭模态框"
+  },
+  "footer": {
+    "description": "探索马来西亚的文化多样性",
+    "builtWith": "用 ❤️ 构建，为了理解马来西亚传统"
+  },
+  "accessibility": {
+    "switchLanguage": "切换到{{language}}",
+    "festivalImage": "{{name}}节日图片",
+    "openFestival": "打开{{name}}节日详情"
+  },
+  "statistics": {
+    "showing": "显示",
+    "of": "个中的",
+    "festivals": "个节日",
+    "categories": "类别",
+    "regions": "地区"
+  },
+  "learnMore": "了解更多",
+  "clickDetails": "点击查看详情",
+  "noFestivalsFound": "未找到节日",
+  "adjustSearchCriteria": "请尝试调整搜索条件"
+}

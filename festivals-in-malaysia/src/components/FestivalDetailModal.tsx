@@ -1,20 +1,20 @@
 import { useEffect, useRef } from "react";
-import type { Festival, Language } from "../types/festival";
-import { getLocalizedText, formatFestivalDate } from "../utils/festivalUtils";
+import { useI18n, getLocalizedText } from "../i18n/useI18n";
+import type { Festival } from "../types/festival";
+import { formatFestivalDate } from "../utils/festivalUtils";
 
 interface FestivalDetailModalProps {
   festival: Festival | null;
-  language: Language;
   isOpen: boolean;
   onClose: () => void;
 }
 
 export const FestivalDetailModal = ({
   festival,
-  language,
   isOpen,
   onClose,
 }: FestivalDetailModalProps) => {
+  const { t, currentLanguage } = useI18n();
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -64,21 +64,6 @@ export const FestivalDetailModal = ({
     }
   };
 
-  const getCategoryText = (category: string) => {
-    const categoryTexts = {
-      religious: { en: "Religious", zh: "宗教", ms: "Keagamaan" },
-      cultural: { en: "Cultural", zh: "文化", ms: "Budaya" },
-      national: { en: "National", zh: "国家", ms: "Nasional" },
-      local: { en: "Local", zh: "地方", ms: "Tempatan" },
-      notable: { en: "Notable", zh: "著名", ms: "Terkenal" },
-    };
-
-    const categoryText = categoryTexts[category as keyof typeof categoryTexts];
-    if (!categoryText) return category;
-
-    return categoryText[language] || categoryText.en;
-  };
-
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
@@ -101,10 +86,10 @@ export const FestivalDetailModal = ({
               ${getCategoryColor(festival.category)}
             `}
             >
-              {getCategoryText(festival.category)}
+              {t(`categories.${festival.category.toLowerCase()}`)}
             </span>
             <span className="text-sm text-gray-600">
-              {formatFestivalDate(festival, language)}
+              {formatFestivalDate(festival, currentLanguage)}
             </span>
           </div>
           <button
@@ -113,7 +98,7 @@ export const FestivalDetailModal = ({
               p-2 hover:bg-gray-100 rounded-full transition-colors duration-200
               focus:outline-none focus:ring-2 focus:ring-blue-500
             "
-            aria-label="Close modal"
+            aria-label={t("modal.closeAriaLabel")}
           >
             <svg
               className="w-6 h-6 text-gray-600"
@@ -138,7 +123,7 @@ export const FestivalDetailModal = ({
             <div className="mb-6">
               <img
                 src={festival.imageUrl}
-                alt={getLocalizedText(festival.name, language)}
+                alt={getLocalizedText(festival.name, currentLanguage)}
                 className="w-full h-64 object-cover rounded-lg"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -150,7 +135,7 @@ export const FestivalDetailModal = ({
 
           {/* Festival Name */}
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            {getLocalizedText(festival.name, language)}
+            {getLocalizedText(festival.name, currentLanguage)}
           </h1>
 
           {/* Regions */}
@@ -163,13 +148,7 @@ export const FestivalDetailModal = ({
                   text-sm font-medium capitalize
                 "
               >
-                {region === "nationwide"
-                  ? language === "ms"
-                    ? "Seluruh negara"
-                    : language === "zh"
-                    ? "全国"
-                    : "Nationwide"
-                  : region}
+                {t(`regions.${region.toLowerCase()}`)}
               </span>
             ))}
           </div>
@@ -177,28 +156,20 @@ export const FestivalDetailModal = ({
           {/* Description */}
           <div className="mb-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-3">
-              {language === "ms"
-                ? "Penerangan"
-                : language === "zh"
-                ? "描述"
-                : "Description"}
+              {t("festival.description")}
             </h2>
             <p className="text-gray-700 text-base leading-relaxed">
-              {getLocalizedText(festival.description, language)}
+              {getLocalizedText(festival.description, currentLanguage)}
             </p>
           </div>
 
           {/* Significance */}
           <div className="mb-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-3">
-              {language === "ms"
-                ? "Kepentingan"
-                : language === "zh"
-                ? "意义"
-                : "Significance"}
+              {t("festival.significance")}
             </h2>
             <p className="text-gray-700 text-base leading-relaxed">
-              {getLocalizedText(festival.significance, language)}
+              {getLocalizedText(festival.significance, currentLanguage)}
             </p>
           </div>
 
@@ -206,11 +177,7 @@ export const FestivalDetailModal = ({
           {festival.practices && festival.practices.length > 0 && (
             <div className="mb-6">
               <h2 className="text-xl font-semibold text-gray-900 mb-3">
-                {language === "ms"
-                  ? "Amalan Budaya"
-                  : language === "zh"
-                  ? "文化习俗"
-                  : "Cultural Practices"}
+                {t("festival.culturalPractices")}
               </h2>
               <ul className="space-y-2">
                 {festival.practices.map((practice, index) => (
@@ -227,7 +194,7 @@ export const FestivalDetailModal = ({
                       />
                     </svg>
                     <span className="text-gray-700">
-                      {getLocalizedText(practice, language)}
+                      {getLocalizedText(practice, currentLanguage)}
                     </span>
                   </li>
                 ))}
@@ -239,11 +206,7 @@ export const FestivalDetailModal = ({
           {festival.relatedLinks && festival.relatedLinks.length > 0 && (
             <div className="mb-6">
               <h2 className="text-xl font-semibold text-gray-900 mb-3">
-                {language === "ms"
-                  ? "Pautan Berkaitan"
-                  : language === "zh"
-                  ? "相关链接"
-                  : "Related Links"}
+                {t("festival.relatedLinks")}
               </h2>
               <div className="space-y-2">
                 {festival.relatedLinks.map((link, index) => (
@@ -260,7 +223,7 @@ export const FestivalDetailModal = ({
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-blue-600 font-medium">
-                        {getLocalizedText(link.title, language)}
+                        {getLocalizedText(link.title, currentLanguage)}
                       </span>
                       <svg
                         className="w-4 h-4 text-blue-600"
@@ -286,18 +249,17 @@ export const FestivalDetailModal = ({
           {festival.videoUrl && (
             <div className="mb-6">
               <h2 className="text-xl font-semibold text-gray-900 mb-3">
-                {language === "ms"
-                  ? "Video"
-                  : language === "zh"
-                  ? "视频"
-                  : "Video"}
+                {t("festival.video")}
               </h2>
               <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
                 <iframe
                   src={festival.videoUrl}
                   className="w-full h-full"
                   allowFullScreen
-                  title={`${getLocalizedText(festival.name, language)} video`}
+                  title={`${getLocalizedText(
+                    festival.name,
+                    currentLanguage
+                  )} video`}
                 />
               </div>
             </div>
